@@ -66,11 +66,11 @@ where abbreviations of model names are:
 
 - Specify the path of your _src_ directory to an environment variable, _LIB_REALFLUID_SRC_. For example:
 
-		echo "export LIB_REALFLUID_SRC=~/OpenFOAM/yourDirectory/realFluidThermophysicalModels/src/" >> ~/.bashrc
+		echo "export LIB_REALFLUID_SRC=~/OpenFOAM/yourDirectory/realFluidThermophysicalModels-6/src/" >> ~/.bashrc
 		source ~/.bashrc
 - To compile the library and applications, go to _realFluidThermophysicalModels_ directory and run the _Allwmake_ script:
 
-		cd ~/OpenFOAM/yourDirectory/realFluidThermophysicalModels/
+		cd ~/OpenFOAM/yourDirectory/realFluidThermophysicalModels-6/
 		./Allwmake
 
 - Now the real-fluid based _thermophysicalModels_ library and _realFluidReactingFoam_ solver are ready to use. The library and solver are stored at _$FOAM_USER_LIBBIN_ and _$FOAM_USER_APPBIN_ directory.
@@ -84,7 +84,7 @@ where abbreviations of model names are:
 ## Tutorials
 Tutorials for generating thermodynamic and transport properties of a pure species, mixture and for laminar non-premixed counterflow flames of CH4 versus O2/CO2 are available in _tutorial_ directory.
 
-	cd ~/OpenFOAM/yourDirectory/realFluidThermophysicalModels/tutorials/
+	cd ~/OpenFOAM/yourDirectory/realFluidThermophysicalModels-6/tutorials/
 
 ## Notes:
 Should you find bugs or have suggestions on how to make the code better, please post on cfd-online using following thread: http://www.cfd-online.com/Forums/ (This will be update later after the paper is accepted). 
