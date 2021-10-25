@@ -1,0 +1,22 @@
+species
+(
+    CH4
+    O2
+    N2
+    CO2
+    H2O
+);
+
+reactions
+{
+/*
+    methaneReaction
+    {
+        type     irreversibleArrheniusReaction;
+        reaction "N2 = N2";
+        A        1e-30;
+        beta     0;
+        Ta       14906;
+    }
+*/
+}

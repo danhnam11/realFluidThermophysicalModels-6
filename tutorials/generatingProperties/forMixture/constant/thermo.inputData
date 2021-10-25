@@ -1,0 +1,237 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      thermo.compressibleGas;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+O2
+{
+    specie
+    {
+        molWeight       31.9988;
+    }
+
+    dataForRealGas
+    {
+    Tc 154.58;
+    Pc 5.043;
+    Vc 73.529;
+    omega 0.025;
+    kappai 0.0;
+    miui 0.0;
+    sigmvi 16.6;
+    }
+
+    thermodynamics
+    {
+        Tlow            100;
+        Thigh           5000;
+        Tcommon         1000;
+        highCpCoeffs    ( 3.28254 0.00148309 -7.57967e-07 2.09471e-10 -2.16718e-14 -1088.46 5.45323 ); //GRI30
+        lowCpCoeffs     ( 3.78246 -0.00299673 9.8473e-06 -9.6813e-09 3.24373e-12 -1063.94 3.65768 );   //GRI30
+    }
+
+    transport
+    {
+        As              1.67212e-06;
+        Ts              170.672;
+    }
+
+    
+    dataForKineticTrans
+    {
+        epsilonOverKb  107.400;
+        sigma          3.458;
+        miui	       0;
+        alpha	       1.6;
+    }
+
+}
+
+H2O
+{
+    specie
+    {
+        molWeight       18.0153;
+    }
+
+    dataForRealGas
+    {
+    Tc 647;
+    Pc 22.064;
+    Vc 55.866;
+    omega 0.344;
+    kappai 0.076;
+    miui 1.844;
+    sigmvi 12.7;
+    }
+	
+    thermodynamics
+    {
+        Tlow            100;
+        Thigh           5000;
+        Tcommon         1000;
+        highCpCoeffs    ( 3.03399 0.00217692 -1.64073e-07 -9.7042e-11 1.68201e-14 -30004.3 4.96677 );  //GRI30
+        lowCpCoeffs     ( 4.19864 -0.00203643 6.5204e-06 -5.48797e-09 1.77198e-12 -30293.7 -0.849032 );//GRI30
+    }
+
+    transport
+    {
+        As              1.67212e-06;
+        Ts              170.672;
+    }
+
+    dataForKineticTrans
+    {
+        epsilonOverKb  572.400;
+        sigma          2.605;
+        miui	       1.844;
+        alpha	       0;
+    }
+}
+
+CH4
+{
+    specie
+    {
+        molWeight       16.0428;
+    }
+
+    dataForRealGas
+    {
+    Tc 190.6;
+    Pc 4.61;
+    Vc 98.6;
+    omega 0.011;
+    kappai 0.0;
+    miui 0.0;
+    sigmvi 24.42;
+    }
+	
+    thermodynamics
+    {
+        Tlow            100;
+        Thigh           6000;
+        Tcommon         1000;
+        highCpCoeffs    ( 0.0748515 0.0133909 -5.73286e-06 1.22293e-09 -1.01815e-13 -9468.34 18.4373 ); //GRI30
+        lowCpCoeffs     ( 5.14988 -0.013671 4.91801e-05 -4.84743e-08 1.66694e-11 -10246.6 -4.6413 );    //GRI30
+    }
+
+    transport
+    {
+        As              1.67212e-06;
+        Ts              170.672;
+    }
+
+    dataForKineticTrans
+    {
+        epsilonOverKb  141.400;
+        sigma          3.746;
+        miui	       0;
+        alpha	       2.6;
+    }
+
+}
+
+CO2
+{
+    specie
+    {
+        molWeight       44.01;
+    }
+
+    dataForRealGas
+    {
+    Tc 304.18;
+    Pc 7.38;
+    Vc 91.9;
+    omega 0.239;
+    kappai 0.0;
+    miui 0.0;
+    sigmvi 26.9;
+    }
+	
+    thermodynamics
+    {
+        Tlow            100;
+        Thigh           5000;
+        Tcommon         1000;
+        highCpCoeffs    ( 3.85746 0.00441437 -2.21481e-06 5.2349e-10 -4.72084e-14 -48759.2 2.27164 ); //GRI30
+        lowCpCoeffs     ( 2.35677 0.0089846 -7.12356e-06 2.45919e-09 -1.437e-13 -48372 9.90105 );     //GRI30
+    }
+
+    transport
+    {
+        As              1.67212e-06;
+        Ts              170.672;
+    }
+
+
+    dataForKineticTrans
+    {
+        epsilonOverKb  244.000;
+        sigma          3.763;
+        miui	       0;
+        alpha	       2.65;
+    }
+
+
+}
+
+N2
+{
+    specie
+    {
+        molWeight       28.0134;
+    }
+
+    dataForRealGas
+    {
+    Tc 126.19;
+    Pc 3.398;
+    Vc 89.445;
+    omega 0.039;
+    kappai 0.0;
+    miui 0.0;
+    sigmvi 17.9;
+    }	
+	
+    thermodynamics
+    {
+        Tlow            100;
+        Thigh           5000;
+        Tcommon         1000;
+        highCpCoeffs    ( 2.92664 0.00148798 -5.68476e-07 1.0097e-10 -6.75335e-15 -922.798 5.98053 ); //GRI30
+        lowCpCoeffs     ( 3.29868 0.00140824 -3.96322e-06 5.64152e-09 -2.44485e-12 -1020.9 3.95037 ); //GRI30
+    }
+
+    transport
+    {
+        As              1.67212e-06;
+        Ts              170.672;
+    }
+
+
+    dataForKineticTrans
+    {
+        epsilonOverKb  97.5300;
+        sigma          3.621;
+        miui	       0;
+        alpha	       1.76;
+    }
+}
+
+
+
+// ************************************************************************* //

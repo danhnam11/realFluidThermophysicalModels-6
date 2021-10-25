@@ -1,0 +1,15 @@
+GENERATE THE PROPERTIES OF SPECIES-by Danh Nam
+- You can generate the properties of a mixture involving species in the reaction mechanism.
+- Temperature is set from 100-2500K. As a result, you can get thermodynamic and transport data from 100-2500K.
+
+Procedure:
+  1. Specify the mass fraction of species in the mixture in 0 directory.
+  2. Changes the pressure in "p" dicitonary file in time "0" directory into pressure that you want to extract.
+  4. after finish, types "./postProcessing dummy_name outputFile_name.dat" to generate data for tecplot format.
+  5. copy the following content into 1st line of the "outputFile_name.dat" generated at step 4.
+
+variables =
+T(K) p(atm) rho(kg/m^3) mu(kg/m-s) kappa(W/m-K) Cv(J/kg-K) Cp(J/kg-K) HE(J/kg)
+
+  6. Now the outputFile_name.dat is ready to be used in tecplot.
+

@@ -1,0 +1,18 @@
+GENERATE THE PROPERTIES OF SPECIES-by Danh Nam
+- Noted that you can generate properties of any species involved in thermo.compessible_realGas dictionary file
+- Temperature is set from 100-2500K. As a result, you can get thermodynamic and transport data from 100-2500K.
+
+Procedure:
+  1. Specifies species name that you want to generate its properties at "species" entry in /constant/reactions file.
+  2. Changes the name of inert species into the species's name that you want to generate properties at "inertSpecie" entry in the thermophysicalProperties dictionary file in constant/ directory.
+  2. Changes the species dictionary file in time "0" directory into the name of species that you want to generate its properties.
+  3. Changes the pressure in "p" dicitonary file in time "0" directory into pressure that you want to extract.
+  4. types "realFluidReactingFoam" to run realFluidReactingFoam solver.
+  5. after finish, types "./postProcessing dummy_name outputFile_name.dat" to generate data for tecplot format.
+  6. copy the following content into 1st line of the "outputFile_name.dat" generated at step 5.
+
+variables =
+T(K) p(atm) rho(kg/m^3) mu(kg/m-s) kappa(W/m-K) Cv(J/kg-K) Cp(J/kg-K) HE(J/kg)   
+
+  7. Now the outputFile_name.dat is ready to be used in tecplot.
+

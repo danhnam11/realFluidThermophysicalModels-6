@@ -1,0 +1,137 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+convertToMeters 0.001;  //mm
+
+halfZone 4.0; 
+yhalfDomain 10; 
+halfAngle 2.5; 
+
+// Radius 
+r1 20; //radius of tube 
+// Height 
+z1      #calc "$yhalfDomain-$halfZone";
+z2      #calc "$yhalfDomain+$halfZone";
+z3      #calc "2*$yhalfDomain";
+
+radHalfAngle    #calc "degToRad($halfAngle)";   //change degree to radian
+
+x1      #calc "$r1*cos($radHalfAngle)";
+maxy1   #calc "$r1*sin($radHalfAngle)";
+miny1   #calc "-1*$maxy1";
+
+vertices
+(
+  (0 0 0)          //0
+  ($x1 $maxy1 0)   //1
+  ($x1 $miny1 0)   //2
+
+  (0 0 $z1)        //3
+  ($x1 $maxy1 $z1) //4
+  ($x1 $miny1 $z1) //5
+
+  (0 0 $z2)        //6
+  ($x1 $maxy1 $z2) //7
+  ($x1 $miny1 $z2) //8
+
+  (0 0 $z3)        //9
+  ($x1 $maxy1 $z3) //10
+  ($x1 $miny1 $z3) //11
+
+);
+
+blocks
+(
+    hex (0 2 1 0 3 5 4 3)     (80 1 40)  simpleGrading (1 1 1) //block1
+    hex (3 5 4 3 6 8 7 6)     (80 1 60)  simpleGrading (1 1 1) //block2
+    hex (6 8 7 6 9 11 10 9)   (80 1 40)  simpleGrading (1 1 1) //block3
+);
+
+edges
+(
+);
+
+boundary
+(
+    fuel
+    {
+        type patch;
+        faces
+        (
+            (1 2 0 0)
+        );
+    }
+    oxidizer
+    {
+        type patch;
+        faces
+        (
+            (9 11 10 9)
+        );
+    }
+    outlet
+    {
+        type patch;
+        faces
+        (
+            (7 10 11 8)
+            (4 7 8 5)
+            (1 4 5 2)
+        );
+    }
+
+
+    axis
+    {
+        type empty;
+        faces
+        (
+            (3 0 0 3)
+            (6 3 3 6)
+            (9 6 6 9)
+        );
+    }
+ 
+
+    front
+    {
+        type wedge;
+        faces
+        (
+            (0 2 5 3)
+            (3 5 8 6)
+            (6 8 11 9)
+        );
+    }
+
+    back
+    {
+        type wedge;
+        faces
+        (
+            (0 3 4 1)
+            (3 6 7 4)
+            (6 9 10 7)
+        );
+    }
+
+);
+
+mergePatchPairs
+(
+);
+
+// ************************************************************************* //
