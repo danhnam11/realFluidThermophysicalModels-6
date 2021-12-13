@@ -92,7 +92,7 @@ Should you find bugs or have suggestions on how to make the code better, please 
 
 ## Authors 
 This package was developed at Combustion & Propulsion Lab., Dept. of Mech. Engineering, Ulsan National Institute of Science and Technology (UNIST), Korea (Prof. C.S. Yoo: https://csyoo.unist.ac.kr/). If you publish results that are obtained using this package, please cite our paper as follows:
-- D. N. Nguyen, K. S. Jung, J. W. Shim, C. S. Yoo, Real-fluid thermophysicalModels: An OpenFOAM-based library for reacting flow simulations at high pressure, Computer Physics Communications (2021)(submitted).
+- D. N. Nguyen, K. S. Jung, J. W. Shim, C. S. Yoo, Real-fluid thermophysicalModels: An OpenFOAM-based library for reacting flow simulations at high pressure, Computer Physics Communications (2021)(accepted).
 ## Reference
 - [1] G. Soave, Equilibrium constants from a modified Redlich-Kwong equation of state, Chem. Eng. Sci. 27 (1972) 1197-1203.
 - [2] D. Peng, D. Robinson, New two-equation of state, Ind. Eng. Chem. Fundam. 15(1976) 59-64. 
