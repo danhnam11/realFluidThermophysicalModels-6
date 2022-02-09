@@ -87,8 +87,7 @@ Tutorials for generating thermodynamic and transport properties of a pure specie
 	cd ~/OpenFOAM/yourDirectory/realFluidThermophysicalModels-6/tutorials/
 
 ## Notes:
-Should you find bugs or have suggestions on how to make the code better, please post on cfd-online using following thread: https://www.cfd-online.com/Forums/openfoam-programming-development/240200-real-fluid-thermophysicalmodels-library.html#post818761 
-
+Should you find bugs or have suggestions on how to make the code better, please post on cfd-online using following thread: https://www.cfd-online.com/Forums/openfoam-community-contributions/241110-real-gas-model-implementation-thermophysicalmodels-library.html 
 
 ## Authors 
 This package was developed at Clean Combustion and Energy Research Lab., Dept. of Mech. Engineering, Ulsan National Institute of Science and Technology (UNIST), Korea (Prof. C.S. Yoo: https://csyoo.unist.ac.kr/). If you publish results that are obtained using this package, please cite our paper as follows:
