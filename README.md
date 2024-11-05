@@ -1,6 +1,7 @@
 # A real-fluid based thermophysicalModels library OF-6
 ## General Information
 An updated _thermophysicalModels_ libary of OpenFOAM 6.0. with real-fluid models for reacting flow simulations at high pressure. Readers are referred to documentations provided in _documentations_ directory for the detail implementation and extension guide. They are written for the development in OpenFOAM-6 but they can be referred for the development in other versions.
+For OpenFOAM-8, see this repository: https://github.com/danhnam11/realFluidThermophysicalModels-8
 ## List of implemented real-fluid models in the new libary
 - Modified Soave-Redlich-Kwong (SRK) model for equation of state [1, 2].
 - Peng-Robinson (PR) model for equation of state [3]
